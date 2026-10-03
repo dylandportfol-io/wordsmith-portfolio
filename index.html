@@ -3,26 +3,24 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Wordsmith AI — Privacy, Regulatory & Compliance Office Portfolio</title>
+  <title>Wordsmith AI — Privacy, regulatory and compliance office</title>
   <style>
     :root {
-      --bg-primary: #0a0d14;
-      --bg-secondary: #111622;
-      --bg-card: #161d2e;
-      --bg-card-hover: #1c253b;
-      --border-color: #242f48;
-      --border-light: #324163;
-      --text-main: #f1f5f9;
-      --text-muted: #94a3b8;
-      --text-dim: #64748b;
-      --accent-blue: #3b82f6;
-      --accent-indigo: #6366f1;
-      --accent-emerald: #10b981;
-      --accent-amber: #f59e0b;
-      --accent-rose: #f43f5e;
-      --accent-purple: #8b5cf6;
-      --tag-bg: rgba(99, 102, 241, 0.12);
-      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      /* Soft, clean SaaS palette aligned with Wordsmith's style */
+      --bg-primary: #f8f9fa;
+      --bg-secondary: #ffffff;
+      --bg-card: #ffffff;
+      --border-color: #e5e7eb;
+      --border-light: #f3f4f6;
+      --text-main: #111827;
+      --text-muted: #4b5563;
+      --text-dim: #6b7280;
+      --accent-blue: #2563eb;
+      --accent-indigo: #4f46e5;
+      --accent-emerald: #059669;
+      --accent-rose: #e11d48;
+      --tag-bg: #eff6ff;
+      --font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     }
 
     * {
@@ -56,11 +54,11 @@
       border-radius: 9999px;
       font-size: 0.75rem;
       font-weight: 600;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
       text-transform: uppercase;
       background: var(--tag-bg);
-      color: #a5b4fc;
-      border: 1px solid rgba(99, 102, 241, 0.3);
+      color: var(--accent-blue);
+      border: 1px solid #dbeafe;
       margin-bottom: 1.25rem;
     }
 
@@ -68,19 +66,17 @@
       width: 8px;
       height: 8px;
       border-radius: 50%;
-      background: var(--accent-emerald);
-      box-shadow: 0 0 8px var(--accent-emerald);
+      background: var(--accent-blue);
+      box-shadow: 0 0 8px rgba(37, 99, 235, 0.4);
     }
 
     h1 {
       font-size: 2.75rem;
-      font-weight: 800;
-      letter-spacing: -0.03em;
+      font-weight: 700;
+      letter-spacing: -0.02em;
       line-height: 1.15;
       margin-bottom: 1rem;
-      background: linear-gradient(135deg, #ffffff 30%, #94a3b8 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
+      color: var(--text-main);
     }
 
     .lead-text {
@@ -102,13 +98,14 @@
       border: 1px solid var(--border-color);
       border-radius: 0.75rem;
       padding: 1.25rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
     }
 
     .stat-label {
       font-size: 0.8rem;
       color: var(--text-dim);
       text-transform: uppercase;
-      letter-spacing: 0.05em;
+      letter-spacing: 0.03em;
       font-weight: 600;
     }
 
@@ -125,11 +122,11 @@
       margin: 3rem auto 0;
     }
 
-    /* AI Frontier: Capabilities vs Limits */
+    /* AI Frontier */
     .section-title {
       font-size: 1.75rem;
-      font-weight: 700;
-      letter-spacing: -0.02em;
+      font-weight: 600;
+      letter-spacing: -0.01em;
       margin-bottom: 0.5rem;
     }
 
@@ -155,6 +152,7 @@
       border-radius: 1rem;
       padding: 2rem;
       border: 1px solid var(--border-color);
+      box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
     }
 
     .frontier-card.can { border-top: 4px solid var(--accent-emerald); }
@@ -179,11 +177,12 @@
       position: relative;
       padding-left: 1.75rem;
       color: var(--text-muted);
-      font-size: 0.925rem;
+      font-size: 0.95rem;
     }
 
     .frontier-list li strong {
       color: var(--text-main);
+      font-weight: 600;
     }
 
     .frontier-card.can .frontier-list li::before {
@@ -225,15 +224,14 @@
     }
 
     .filter-btn:hover {
-      background: var(--bg-card);
+      background: var(--bg-primary);
       color: var(--text-main);
-      border-color: var(--border-light);
     }
 
     .filter-btn.active {
-      background: var(--accent-indigo);
+      background: var(--text-main);
       color: #ffffff;
-      border-color: var(--accent-indigo);
+      border-color: var(--text-main);
     }
 
     /* Workstream Cards Grid */
@@ -257,13 +255,13 @@
       flex-direction: column;
       transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
       cursor: pointer;
-      position: relative;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.05);
     }
 
     .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent-indigo);
-      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+      transform: translateY(-2px);
+      border-color: var(--accent-blue);
+      box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
     }
 
     .card-top {
@@ -275,7 +273,7 @@
 
     .card-num {
       font-size: 0.75rem;
-      font-weight: 700;
+      font-weight: 600;
       color: var(--text-dim);
       font-family: monospace;
     }
@@ -289,13 +287,13 @@
       letter-spacing: 0.03em;
     }
 
-    .cat-privacy { background: rgba(59, 130, 246, 0.15); color: #93c5fd; }
-    .cat-conduct { background: rgba(245, 158, 11, 0.15); color: #fcd34d; }
-    .cat-fincrime { background: rgba(244, 63, 94, 0.15); color: #fda4af; }
+    .cat-privacy { background: #dbeafe; color: #1e40af; }
+    .cat-conduct { background: #fef3c7; color: #b45309; }
+    .cat-fincrime { background: #ffe4e6; color: #e11d48; }
 
     .card-title {
-      font-size: 1.25rem;
-      font-weight: 700;
+      font-size: 1.2rem;
+      font-weight: 600;
       line-height: 1.35;
       margin-bottom: 0.5rem;
       color: var(--text-main);
@@ -303,20 +301,20 @@
 
     .card-anchor {
       font-size: 0.8rem;
-      font-weight: 600;
-      color: var(--accent-indigo);
+      font-weight: 500;
+      color: var(--accent-blue);
       margin-bottom: 1rem;
     }
 
     .card-problem {
-      font-size: 0.875rem;
+      font-size: 0.9rem;
       color: var(--text-muted);
       margin-bottom: 1.25rem;
       flex-grow: 1;
     }
 
     .card-meta-box {
-      background: var(--bg-secondary);
+      background: var(--bg-primary);
       border: 1px solid var(--border-color);
       border-radius: 0.5rem;
       padding: 0.85rem;
@@ -340,7 +338,7 @@
       justify-content: space-between;
       font-size: 0.85rem;
       font-weight: 600;
-      color: #a5b4fc;
+      color: var(--accent-blue);
       margin-top: auto;
       padding-top: 1rem;
       border-top: 1px solid var(--border-color);
@@ -353,8 +351,8 @@
       left: 0;
       width: 100vw;
       height: 100vh;
-      background: rgba(4, 7, 13, 0.85);
-      backdrop-filter: blur(8px);
+      background: rgba(17, 24, 39, 0.7);
+      backdrop-filter: blur(4px);
       z-index: 1000;
       display: none;
       align-items: center;
@@ -366,22 +364,22 @@
 
     .modal-content {
       background: var(--bg-secondary);
-      border: 1px solid var(--border-light);
-      border-radius: 1.25rem;
-      max-width: 960px;
+      border: 1px solid var(--border-color);
+      border-radius: 1rem;
+      max-width: 1000px;
       width: 100%;
       max-height: 90vh;
       overflow-y: auto;
       padding: 2.5rem;
       position: relative;
-      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.7);
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
     }
 
     .modal-close-btn {
       position: absolute;
       top: 1.5rem;
       right: 1.5rem;
-      background: var(--bg-card);
+      background: var(--bg-primary);
       border: 1px solid var(--border-color);
       color: var(--text-muted);
       width: 2.5rem;
@@ -397,68 +395,41 @@
 
     .modal-close-btn:hover {
       color: var(--text-main);
-      background: var(--accent-rose);
-      border-color: var(--accent-rose);
+      background: #f3f4f6;
     }
 
     .modal-header { margin-bottom: 2rem; }
     .modal-pre-title {
       font-size: 0.85rem;
-      color: var(--accent-indigo);
-      font-weight: 700;
+      color: var(--accent-blue);
+      font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.05em;
       margin-bottom: 0.35rem;
     }
-    .modal-title { font-size: 2rem; font-weight: 800; line-height: 1.2; margin-bottom: 0.5rem; }
+    .modal-title { font-size: 1.75rem; font-weight: 700; line-height: 1.2; margin-bottom: 0.5rem; }
     .modal-reg-anchor { font-size: 0.95rem; color: var(--text-muted); }
 
-    .blueprint-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
+    /* Mindmap Image Container */
+    .mindmap-container {
+      width: 100%;
       margin-bottom: 2rem;
-    }
-
-    @media (max-width: 768px) {
-      .blueprint-grid { grid-template-columns: 1fr; }
-    }
-
-    .blueprint-box {
-      background: var(--bg-card);
       border: 1px solid var(--border-color);
       border-radius: 0.75rem;
-      padding: 1.25rem;
-    }
-
-    .blueprint-box-title {
-      font-size: 0.85rem;
-      font-weight: 700;
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 0.75rem;
+      overflow: hidden;
+      background: var(--bg-primary);
       display: flex;
       align-items: center;
-      gap: 0.5rem;
+      justify-content: center;
+      padding: 1rem;
     }
 
-    .box-agent { color: #60a5fa; border-left: 3px solid #60a5fa; padding-left: 0.5rem; }
-    .box-skill { color: #34d399; border-left: 3px solid #34d399; padding-left: 0.5rem; }
-    .box-repo { color: #f472b6; border-left: 3px solid #f472b6; padding-left: 0.5rem; }
-    .box-conn { color: #fbbf24; border-left: 3px solid #fbbf24; padding-left: 0.5rem; }
-
-    .blueprint-content {
-      font-size: 0.875rem;
-      color: var(--text-muted);
-      line-height: 1.5;
+    .mindmap-img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
     }
-
-    .blueprint-content ul {
-      margin-left: 1.25rem;
-      margin-top: 0.5rem;
-    }
-
-    .blueprint-content li { margin-bottom: 0.35rem; }
 
     .deep-dive-section {
       background: var(--bg-primary);
@@ -470,33 +441,40 @@
 
     .deep-dive-title {
       font-size: 1.05rem;
-      font-weight: 700;
+      font-weight: 600;
       margin-bottom: 0.75rem;
       display: flex;
       align-items: center;
       gap: 0.5rem;
+      color: var(--text-main);
     }
 
-    .alert-bottleneck { color: var(--accent-rose); }
-    .alert-resolution { color: var(--accent-emerald); }
-    .alert-metric { color: var(--accent-amber); }
+    .blueprint-content {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      line-height: 1.6;
+    }
 
-    /* Footer */
+    /* Footer / Caveat */
     footer {
       max-width: 1300px;
       margin: 4rem auto 0;
       padding: 2.5rem 0;
       border-top: 1px solid var(--border-color);
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1.5rem;
-      font-size: 0.875rem;
+      font-size: 0.8rem;
       color: var(--text-dim);
+      line-height: 1.5;
     }
-
-    .footer-left strong { color: var(--text-main); }
+    
+    .footer-caveat {
+      background: #fef2f2;
+      border: 1px solid #fecaca;
+      color: #991b1b;
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
   </style>
 </head>
 <body>
@@ -505,64 +483,61 @@
   <header>
     <div class="badge-pill">
       <span class="badge-pulse"></span>
-      Wordsmith AI Architecture &bull; In-House Legal Solutions Portfolio
+      Wordsmith architecture &bull; In-house legal solutions portfolio
     </div>
-    <h1>Privacy, Regulatory & Compliance Office</h1>
+    <h1>Privacy, regulatory and compliance office</h1>
     <p class="lead-text">
-      An architectural portfolio translating complex regulatory obligations across UK/EU GDPR, FCA Conduct, and Multi-Jurisdictional Sanctions into deterministic, no-code Wordsmith AI workflows. Designed for legal and compliance teams requiring audit-grade execution and rigorous Human-in-the-Loop governance.
+      An architectural portfolio mapping messy regulatory obligations across UK/EU GDPR, FCA conduct, and multi-jurisdictional sanctions into structured Wordsmith workflows. Designed for legal teams requiring automated intake routing, RAG-enabled policy retrieval, and rigorous human-in-the-loop (HITL) governance.
     </p>
 
     <div class="header-stats-grid">
       <div class="stat-card">
-        <div class="stat-label">Architecture Core</div>
-        <div class="stat-value">4 Building Blocks</div>
-        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">Agent &bull; Skill &bull; Repo &bull; Connector</p>
+        <div class="stat-label">Architecture core</div>
+        <div class="stat-value">4 building blocks</div>
+        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">Agents &bull; Skills &bull; Repos &bull; Connectors</p>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Portfolio Modules</div>
-        <div class="stat-value">9 Production Blueprints</div>
-        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">Privacy &bull; Conduct &bull; Financial Crime</p>
+        <div class="stat-label">Portfolio modules</div>
+        <div class="stat-value">9 production workflows</div>
+        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">Privacy &bull; Conduct &bull; Financial crime</p>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Statutory Guardrail</div>
-        <div class="stat-value">Zero Blind Action</div>
-        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">State-change actions gated behind HITL</p>
+        <div class="stat-label">Statutory guardrail</div>
+        <div class="stat-value">HITL enforcement</div>
+        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">State-change actions gated by counsel</p>
       </div>
       <div class="stat-card">
-        <div class="stat-label">Live Integration</div>
-        <div class="stat-value">Model Context Protocol</div>
-        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">Zero persistent storage on MCP lookups</p>
+        <div class="stat-label">Live integration</div>
+        <div class="stat-value">MCP connectivity</div>
+        <p style="font-size: 0.75rem; color: var(--text-dim); margin-top: 0.25rem;">Zero persistent storage on data lookups</p>
       </div>
     </div>
   </header>
 
   <main class="container">
 
-    <!-- Frontier Analysis: What AI Can vs Cannot Do -->
+    <!-- Frontier Analysis -->
     <section>
-      <h2 class="section-title">The Frontier: Operational Reality in Legal AI</h2>
+      <h2 class="section-title">The frontier: what AI can and cannot do for legal</h2>
       <p class="section-subtitle">
-        Deploying Wordsmith in regulated environments requires absolute candour regarding machine capabilities versus human statutory obligations.
+        Deploying Wordsmith in regulated environments requires a clear understanding of progressive disclosure and machine limits.
       </p>
 
       <div class="frontier-grid">
         <div class="frontier-card can">
           <h3>
             <span style="color: var(--accent-emerald);">●</span>
-            What Wordsmith AI Delivers Today
+            What Wordsmith delivers today
           </h3>
           <ul class="frontier-list">
             <li>
-              <strong>Cross-System Triage & Orchestration:</strong> Reaches across inboxes, Jira, and core registries via MCP without storing underlying customer payload data locally.
+              <strong>Auto routing and triage:</strong> Reaches across shared inboxes and Jira via Model Context Protocol (MCP) to parse unstructured intake and route tasks to the correct legal owner.
             </li>
             <li>
-              <strong>Statutory Clock & SLA Normalisation:</strong> Automatically parses unstructured intake to calculate and initiate strict deadlines (e.g., GDPR 72-hr notifications, DISP Day 3 / Week 8 clocks).
+              <strong>RAG-enabled policy synthesis:</strong> Utilises retrieval augmented generation to anchor outputs directly to internal compliance matrices, ISO controls, and FCA guidance synced in the repository.
             </li>
             <li>
-              <strong>Playbook & Blueprint Adherence:</strong> Executes deterministic, multi-branch workflows against corporate knowledge repositories (ISO 27001 policies, Consumer Duty matrices, RTS 22 rules).
-            </li>
-            <li>
-              <strong>First-Draft & Evidence Synthesis:</strong> Assembles complex Enhanced Due Diligence (EDD) packs, reverse-solicitation memos, and audit registers in plain, standard-compliant English.
+              <strong>First-draft evidence compilation:</strong> Assembles complex enhanced due diligence (EDD) packs and audit registers in standard-compliant language using prescribed playbooks.
             </li>
           </ul>
         </div>
@@ -570,20 +545,17 @@
         <div class="frontier-card cannot">
           <h3>
             <span style="color: var(--accent-rose);">●</span>
-            What AI Cannot Do (Current Frontiers)
+            Current architectural guardrails
           </h3>
           <ul class="frontier-list">
             <li>
-              <strong>Unsupervised Regulatory Discretion:</strong> Wordsmith cannot replace senior legal or MLRO liability. It surfaces defensible rationale; the legal sign-off remains with qualified counsel.
+              <strong>Unsupervised regulatory discretion:</strong> Wordsmith cannot replace senior legal liability. It surfaces defensible rationale via skills, but final sign-off remains with qualified counsel.
             </li>
             <li>
-              <strong>Autonomous State-Changing Actions:</strong> High-liability external dispatches (e.g., notifying the ICO under Article 33, STOR filings to the FCA, ARM submissions) must never bypass a Human-in-the-Loop review gate.
+              <strong>Autonomous state-changing actions:</strong> High-liability external dispatches (e.g., notifying the ICO under Article 33 or FCA STOR filings) are structurally blocked without a human-in-the-loop review gate.
             </li>
             <li>
-              <strong>Handling Ambiguity Without Grounding:</strong> An agent cannot extrapolate statutory positions in an information vacuum. If internal policy or precedent is absent from the Repository, hallucination risk spikes.
-            </li>
-            <li>
-              <strong>Subjective Risk Appetite Calibration:</strong> AI cannot determine an enterprise's commercial tolerance for borderline sanctions nexus or complex multi-jurisdictional licensing exemptions without codified boundaries.
+              <strong>Subjective risk appetite calibration:</strong> AI cannot determine an enterprise's commercial tolerance for borderline sanctions nexus without codified boundaries in the playbook.
             </li>
           </ul>
         </div>
@@ -594,16 +566,16 @@
     <section>
       <div style="display: flex; justify-content: space-between; align-items: flex-end; margin-bottom: 1rem;">
         <div>
-          <h2 class="section-title">Compliance Workstreams Portfolio</h2>
-          <p class="section-subtitle" style="margin-bottom: 0;">Select a vertical to review operational problem solving, Wordsmith blocks, bottlenecks, and efficiency metrics.</p>
+          <h2 class="section-title">Compliance workflows portfolio</h2>
+          <p class="section-subtitle" style="margin-bottom: 0;">Select a vertical to review operational problem solving, logic maps, and architecture notes.</p>
         </div>
       </div>
 
       <div class="filter-bar">
-        <button class="filter-btn active" data-filter="all">All Workstreams (9)</button>
-        <button class="filter-btn" data-filter="privacy">Pillar 1: Privacy & Data Protection (3)</button>
-        <button class="filter-btn" data-filter="conduct">Pillar 2: Regulatory Conduct & Servicing (3)</button>
-        <button class="filter-btn" data-filter="fincrime">Pillar 3: Sanctions & Financial Crime (3)</button>
+        <button class="filter-btn active" data-filter="all">All workflows (9)</button>
+        <button class="filter-btn" data-filter="privacy">Pillar 1: Privacy and data protection (3)</button>
+        <button class="filter-btn" data-filter="conduct">Pillar 2: Regulatory conduct and servicing (3)</button>
+        <button class="filter-btn" data-filter="fincrime">Pillar 3: Sanctions and financial crime (3)</button>
       </div>
 
       <!-- Workstreams Grid -->
@@ -624,42 +596,28 @@
         <div class="modal-reg-anchor" id="m-anchor">Anchor</div>
       </div>
 
-      <div class="blueprint-grid">
-        <div class="blueprint-box">
-          <div class="blueprint-box-title box-agent">1. The Agent (The When)</div>
-          <div class="blueprint-content" id="m-agent">Content</div>
-        </div>
-        <div class="blueprint-box">
-          <div class="blueprint-box-title box-skill">2. The Skills (The How)</div>
-          <div class="blueprint-content" id="m-skill">Content</div>
-        </div>
-        <div class="blueprint-box">
-          <div class="blueprint-box-title box-repo">3. Repositories (What It Knows)</div>
-          <div class="blueprint-content" id="m-repo">Content</div>
-        </div>
-        <div class="blueprint-box">
-          <div class="blueprint-box-title box-conn">4. Connectors (The Where)</div>
-          <div class="blueprint-content" id="m-conn">Content</div>
-        </div>
+      <!-- Uploaded Mindmap Image -->
+      <div class="mindmap-container">
+        <img id="m-image" class="mindmap-img" src="" alt="Architectural mindmap workflow" />
       </div>
 
       <div class="deep-dive-section">
-        <div class="deep-dive-title alert-bottleneck">
-          ⚠️ Operational Bottleneck & Failure Modes
+        <div class="deep-dive-title">
+          ⚠️ Operational bottleneck and legacy trap
         </div>
         <p class="blueprint-content" id="m-bottleneck">Bottleneck</p>
       </div>
 
       <div class="deep-dive-section">
-        <div class="deep-dive-title alert-resolution">
-          🛡️ Wordsmith Architectural Resolution & HITL Guardrail
+        <div class="deep-dive-title">
+          🛡️ Wordsmith architectural resolution
         </div>
         <p class="blueprint-content" id="m-resolution">Resolution</p>
       </div>
 
       <div class="deep-dive-section" style="margin-bottom: 0;">
-        <div class="deep-dive-title alert-metric">
-          📈 Measurable Impact & Efficiency Metric
+        <div class="deep-dive-title">
+          📈 Measurable impact and efficiency metric
         </div>
         <p class="blueprint-content" id="m-metric">Metric</p>
       </div>
@@ -667,151 +625,124 @@
   </div>
 
   <footer>
-    <div class="footer-left">
-      <strong>Wordsmith AI Compliance Engineering Vertical</strong> &bull; Structured Solutions Architecture
-      <br /><span style="font-size: 0.75rem;">Adhering to Wordsmith 4-Block Principles: Agent &bull; Skill &bull; Repository &bull; Connector</span>
+    <div class="footer-caveat">
+      CONFIDENTIALITY AND PRIVACY NOTICE: This portal and its underlying architecture frameworks have been developed exclusively for the Wordsmith AI interview and evaluation process. The workflows, logic models, and visual diagrams contained herein are proprietary to the candidate and must not be shared, distributed, or recirculated outside of the Wordsmith hiring committee.
     </div>
     <div>
-      Ready for deployment on GitHub Pages or custom domain.
+      <strong>Wordsmith AI compliance engineering vertical</strong> &bull; Structured solutions architecture<br />
+      Designed for GitHub Pages deployment.
     </div>
   </footer>
 
   <script>
-    // Portfolio Data Source representing all 9 mindmaps
+    // Portfolio Data Source representing all 9 mindmaps, updated with accurate image names and terminology
     const portfolioData = [
       {
         id: 1,
-        title: "EU AI Act Risk Tiering & Deployer Screening",
+        title: "EU AI Act risk tiering and deployer screening",
         pillar: "privacy",
-        pillarName: "Privacy & Data Protection",
+        pillarName: "Privacy and data protection",
         anchor: "EU AI Act (Articles 5, 6, Annex III, 50), ICO ADM, NIST AI RMF",
-        shortDesc: "Automates preliminary risk classification for ML/LLM deployments, scanning code commits and PRDs for prohibited practices and high-risk conformity triggers.",
-        agent: "Triggers autonomously on new model submissions in MLflow/Hugging Face, feature epic creations in Jira, or PRD updates. Determines whether AI system constitutes a prohibited, high-risk, or transparency-only application.",
-        skills: "Prohibited checks (social scoring, workplace biometric emotion tracking, dark patterns); Annex III high-risk classifier; FRIA / NIST AI RMF preliminary card generator; Article 50 transparency disclosure compiler.",
-        repositories: "EU AI Act statutory text, NIST AI RMF governance controls, ICO Explainability & Article 22 Automated Decision-Making (ADM) guidance.",
-        connectors: "Model registries (MLflow, Hugging Face, internal Git), Confluence product specification spaces, Jira Product Discovery.",
+        imagePath: "AI Act - Due Diligence and Compliance.png",
+        shortDesc: "Automates preliminary risk classification for ML/LLM deployments, scanning code commits for prohibited practices and high-risk triggers.",
         bottleneck: "Engineering teams deploy models or third-party wrappers without prior legal review, leading to retrofitted compliance and risk of Article 5 non-compliance fines.",
-        resolution: "Continuous webhook ingestion halts code deployment pipelines until a deterministic compliance evaluation is signed off by the AI Governance Committee / DPO via a mandatory Human-in-the-Loop review card.",
+        resolution: "Continuous webhook ingestion auto routes code deployment pipelines for triage. The agent uses RAG to cross-reference the EU AI Act statutory text and halts deployment until a deterministic conformity evaluation is signed off by the DPO via a mandatory HITL review card.",
         metric: "Reduces AI governance intake review turnaround from 12 working days to under 45 minutes; 100% auditable traceability for pre-deployment conformity assessments."
       },
       {
         id: 2,
-        title: "Cross-Border Servicing & Reverse Solicitation Engine",
+        title: "Cross-border servicing and reverse solicitation engine",
         pillar: "conduct",
-        pillarName: "Regulatory Conduct & Servicing",
-        anchor: "MiFID II, PSD2 Passporting, FCA / ESMA Guidelines, UAE SCA/DFSA/ADGM, SEC Exemptions",
-        shortDesc: "Validates genuine reverse-solicitation defenses by auditing inbound marketing trails, UTM parameters, and corporate domicile before commercial onboarding.",
-        agent: "Ingests prospect registrations via CRM webhooks or sales inbox APIs. Orchestrates jurisdiction identification, applies non-solicitation rules, and routes onboarding requests.",
-        skills: "Skill 1: Audit Marketing Footprint (extracts email domain, IP geolocation, audits UTM campaigns to prove absence of active targeting). Skill 2: Map Jurisdiction & Licensing Perimeter (applies MiFID II/PSD2, US retail hard reject). Skill 3: Generate Reverse Solicitation Defence Pack & Client Declaration Blueprint.",
-        repositories: "Cross-Border Servicing Matrix (traffic-light taxonomy), EBA Passporting Guidelines, UAE Financial Promotion SOPs, Approved Client Declaration templates.",
-        connectors: "Salesforce and HubSpot (read-only UTM tools and lead attribution), Marketing campaign audience databases, internal onboarding case management.",
+        pillarName: "Regulatory conduct and servicing",
+        anchor: "MiFID II, PSD2 passporting, FCA guidelines, UAE DFSA",
+        imagePath: "Crossborder servicing.png",
+        shortDesc: "Validates genuine reverse-solicitation defenses by auditing inbound marketing trails and corporate domicile before commercial onboarding.",
         bottleneck: "Sales teams onboard offshore clients claiming 'reverse solicitation' while digital marketing campaigns actively target those overseas territories, creating severe regulatory exposure under local licensing regimes.",
-        resolution: "Deterministic UTM tag verification checks inbound leads against active ad databases; automatically freezes pipeline if marketing correlation is identified, routing to Senior Compliance Counsel.",
+        resolution: "An intake agent auto routes prospect registrations via CRM webhooks. Utilizing MCP connectors, it audits UTM tag parameters against active ad databases. If marketing correlation is identified, the agent freezes the pipeline and drafts an escalation memo for senior compliance counsel review.",
         metric: "Eliminates 92% of manual cross-border jurisdiction cross-checking time; delivers zero-defect evidentiary packs for regulatory defense."
       },
       {
         id: 3,
-        title: "FCA Complaints Triage & Vulnerability Engine",
+        title: "FCA complaints triage and vulnerability engine",
         pillar: "conduct",
-        pillarName: "Regulatory Conduct & Servicing",
+        pillarName: "Regulatory conduct and servicing",
         anchor: "FCA DISP 1.1–1.9, Consumer Duty (PRIN 2A), Vulnerable Customers (FG21/1)",
-        shortDesc: "Ingests multi-channel customer complaints, extracts vulnerable customer drivers under FCA FG21/1, and enforces strict statutory DISP response clocks.",
-        agent: "Senior Regulatory Complaints Agent triggered by inbound email to shared mailboxes or ticketing endpoints. Follows a strict 7-step triage and categorisation decision procedure.",
-        skills: "Entity Identification & Match; Vulnerability Assessment (Health, Life Events, Resilience, Capability drivers); DISP Clock Management (Day 3 Summary Resolution under DISP 1.5, Week 8 Final Response); Plain English drafting (<25 words per sentence).",
-        repositories: "FCA DISP Handbook, FCA PRIN 2A Consumer Duty rules, Internal Vulnerability Escalation Matrix, Approved DISP 1.5 and 1.6 communication blueprints.",
-        connectors: "Exchange/Outlook shared mailboxes, Core Banking CRM, ticketing systems, internal complaint logs.",
+        imagePath: "FCA Complaints Handling.png",
+        shortDesc: "Ingests multi-channel customer complaints, extracts vulnerable customer drivers, and enforces strict statutory DISP response clocks.",
         bottleneck: "Unstructured customer emails sit in shared queues, missing the informal 3-day resolution window (DISP 1.5) and burying vulnerable customer indicators under volume.",
-        resolution: "Immediate intent parsing identifies FG21/1 vulnerability triggers on arrival, auto-populates root-cause categories, and drafts compliant acknowledgement letters for mandatory 1-click human handler review.",
+        resolution: "Immediate intent parsing auto routes emails based on FG21/1 vulnerability triggers. RAG architecture queries the FCA DISP handbook repository to initiate the correct timeline, drafting compliant acknowledgement letters for mandatory 1-click human handler review.",
         metric: "Over 15% reduction in customer detriment; 100% compliance with FCA statutory holding update milestones; zero missed Week 8 final response deadlines."
       },
       {
         id: 4,
-        title: "General Licence Qualification & Sanctions Audit Trail",
+        title: "General licence qualification and sanctions audit trail",
         pillar: "fincrime",
-        pillarName: "Sanctions & Financial Crime",
-        anchor: "OFSI / OFAC General Licences, Counter-Terrorism Sanctions, Russia Regulations",
-        shortDesc: "Automates four-corners verification against active General Licences, managing strict statutory 7- or 14-day reporting calendars to government authorities.",
-        agent: "Triggered by trade finance transaction entries or clearing alerts. Checks counterparties, jurisdictions, and payment corridors against standing General Licences.",
-        skills: "Four-Corners Verification (matches HS codes, permitted corridors, and certified end-users against General Licence schedules); Timeline Cross-Checker (wind-down deadline enforcement); Regulatory Notification Drafter (OFSI/OFAC statutory letters).",
-        repositories: "Immutable Active Licence Registry (with expiry schedules), Qualifying Condition Rulebooks, Record-Retention Mandates.",
-        connectors: "Core Trade Finance engines, SWIFT messaging feeds, SharePoint audit repositories, Power BI reporting databases.",
-        bottleneck: "Trading desks inadvertently rely on expired or mismatched General Licences, missing mandatory post-transaction notification windows (e.g. OFSI 7-day or 14-day notification requirements).",
-        resolution: "Agent cross-verifies trade documentation against live GL schedules; schedules automated compliance reminders and generates complete notification filing packs for MLRO sign-off.",
+        pillarName: "Sanctions and financial crime",
+        anchor: "OFSI / OFAC General Licences, counter-terrorism sanctions",
+        imagePath: "General License Application-Qualification-Audit-trail.png",
+        shortDesc: "Automates four-corners verification against active general licences, managing strict statutory 7- or 14-day reporting calendars.",
+        bottleneck: "Trading desks inadvertently rely on expired or mismatched general licences, missing mandatory post-transaction notification windows (e.g., OFSI 7-day notification requirements).",
+        resolution: "Agent cross-verifies trade documentation via MCP against an immutable active licence registry. It schedules automated compliance reminders and uses RAG to generate complete notification filing packs for MLRO sign-off before statutory expiry.",
         metric: "Reduces complex licence qualification assessments from 4 hours to 3 minutes; zero missed statutory reporting deadlines across active trade books."
       },
       {
         id: 5,
-        title: "Integrated ISO 27001 / SOC 2 Privacy Control Testing",
+        title: "Integrated ISO 27001 / SOC 2 privacy control testing",
         pillar: "privacy",
-        pillarName: "Privacy & Data Protection",
-        anchor: "ISO/IEC 27001:2022 Annex A, SOC 2 Trust Services Criteria, UK GDPR Art 32",
-        shortDesc: "Transforms episodic annual compliance into continuous audit readiness by gathering access logs, training records, and vulnerability scans into verifiable evidence packs.",
-        agent: "Runs on a monthly scheduled audit cadence or executes 30 days prior to formal external audit windows. Coordinates evidence collection across enterprise infrastructure.",
-        skills: "Access Control Audit (flags leavers retaining access past 24-hour statutory SLA); Privacy Training Audit (flags incomplete onboarding training past 14 days); Statement of Applicability reconciler; Exception Report compiler.",
-        repositories: "ISO 27001 Statement of Applicability, SOC 2 Criteria Mapping, Corporate Risk Register, Internal Security & Data Protection Policies.",
-        connectors: "HR systems (Rippling, Hibob), Identity Providers (Okta, Microsoft Entra ID), Vulnerability Scanners, Jira Service Desk.",
+        pillarName: "Privacy and data protection",
+        anchor: "ISO/IEC 27001:2022 Annex A, SOC 2 Trust Services Criteria",
+        imagePath: "Integrated ISO 27001 - SOC 2 - Privacy Control Testing.png",
+        shortDesc: "Transforms episodic annual compliance into continuous audit readiness by gathering access logs and training records into verifiable evidence packs.",
         bottleneck: "Internal legal and infosec teams expend weeks screenshotting systems and hunting leaver logs, resulting in point-in-time, error-prone compliance.",
-        resolution: "Autonomous MCP queries extract non-compliant access permissions and training deficits directly into a unified CISO/DPO review deck with remediations pre-drafted.",
+        resolution: "Autonomous MCP queries extract non-compliant access permissions from HR and identity providers. Using RAG against the corporate risk register, it highlights deficits directly into a unified CISO/DPO review deck with remediations pre-drafted.",
         metric: "Reduces audit preparation cycle time by ~75%; slashes external auditor evidence review cycles from weeks to single inspection sessions."
       },
       {
         id: 6,
-        title: "Maritime Sanctions, Shipping Docs & AIS Red-Flag Escalation",
+        title: "Maritime sanctions and AIS red-flag escalation",
         pillar: "fincrime",
-        pillarName: "Sanctions & Financial Crime",
-        anchor: "OFSI / OFAC Maritime Advisory, G7 Price Cap, IMO Guidelines, LOI Verification",
-        shortDesc: "Parses dense trade packets (Bills of Lading, Cargo Manifests) and calls real-time marine AIS trackers to flag dark fleet activity and price cap anomalies.",
-        agent: "Ingests trade packets via shared inbox or trade finance portal. Orchestrates a 3-Lines-of-Defence verification pipeline across vessel data and cargo profiles.",
-        skills: "Unstructured File Parsing (extracts vessel IMO numbers, transhipment hubs, consignees); Evasion Detection (identifies unverified Ship-to-Ship transfers, AIS spoofing history, unapproved flag hopping); Price Cap Attestation Validator.",
-        repositories: "Internal Sanctions Policy, G7/EU/UK Price Cap Documentation Standards, Historical Precedent Escalations Library.",
-        connectors: "Maritime Intelligence Platforms (SeaSearcher, Lloyd's List Intelligence via MCP), Trade document OCR engines, Power BI MI dashboard.",
+        pillarName: "Sanctions and financial crime",
+        anchor: "OFSI maritime advisory, G7 price cap, IMO guidelines",
+        imagePath: "Maritime and International Trade.png",
+        shortDesc: "Parses dense trade packets and calls real-time marine AIS trackers to flag dark fleet activity and price cap anomalies.",
         bottleneck: "Manual OCR or human review misses opaque transhipment clauses and spoofed vessel identities hidden in hundreds of pages of unstructured cargo manifests.",
-        resolution: "Agent queries live maritime telemetry via MCP to cross-verify physical ship coordinates against declared port calls; high-risk anomalies generate an immediate EDD escalations memo for the Sanctions Officer.",
+        resolution: "Agent queries live maritime telemetry via MCP to cross-verify physical ship coordinates against declared port calls. High-risk anomalies generate an immediate EDD escalations memo leveraging progressive disclosure skills for the sanctions officer.",
         metric: "Cuts document-heavy vessel triage from 6 hours to under 8 minutes per trade packet; 100% detection of spoofed or high-risk maritime touchpoints."
       },
       {
         id: 7,
-        title: "MiFIR Article 26 Transaction Reporting Exception Engine",
+        title: "MiFIR Article 26 transaction reporting exception engine",
         pillar: "conduct",
-        pillarName: "Regulatory Conduct & Servicing",
-        anchor: "MiFIR Article 26, ESMA RTS 22, FCA SUP 17A, MAR Article 16 (STOR)",
-        shortDesc: "Automates root-cause reconciliation for transaction reporting rejections within the strict T+1 to NCA statutory deadline.",
-        agent: "Triggered by API webhooks on ARM / National Competent Authority execution rejection messages. Evaluates exception codes and determines remediation path.",
-        skills: "Article 26 Resolution Skill (parses XML validation errors, queries live registries for updated Legal Entity Identifiers [LEIs], resolves TVTIC mismatch, formats corrected XML schema payload).",
-        repositories: "ESMA RTS 22 Technical Standards, FCA Transaction Reporting User Pack, MiFID II Conflicts Policy, Approved ARM schema templates.",
-        connectors: "Internal SQL transaction databases, GLEIF global LEI database, Approved Reporting Mechanism (ARM) staging gateway.",
-        bottleneck: "Transaction errors (e.g. lapsed counterparty LEIs or malformed Trading Venue Transaction Identification Codes) fail at the ARM level, risking non-compliance with the mandatory T+1 deadline.",
-        resolution: "Agent fetches active LEI data via GLEIF connector, formats the corrected ISO 20022 XML payload, and stages the remediation ticket for Senior Compliance Counsel approval.",
+        pillarName: "Regulatory conduct and servicing",
+        anchor: "MiFIR Article 26, ESMA RTS 22, FCA SUP 17A, MAR Article 16",
+        imagePath: "MiFID T+1 Transaction Reporting Exemptions.png",
+        shortDesc: "Automates root-cause reconciliation for transaction reporting rejections within the strict T+1 statutory deadline.",
+        bottleneck: "Transaction errors (e.g., lapsed counterparty LEIs) fail at the ARM level, risking non-compliance with the mandatory T+1 deadline while compliance manually reconciles codes.",
+        resolution: "Triggered by API webhooks, the agent auto routes the exception, fetches active LEI data via a GLEIF connector, and formats the corrected ISO 20022 XML payload. The remediation ticket is staged for senior compliance counsel HITL approval.",
         metric: "Reduces error-to-resubmission turnaround by 85%; eliminates backlog of late reporting notifications to the Financial Conduct Authority."
       },
       {
         id: 8,
-        title: "Dynamic RoPA Maintenance (GDPR Article 30)",
+        title: "Dynamic RoPA maintenance (GDPR Article 30)",
         pillar: "privacy",
-        pillarName: "Privacy & Data Protection",
-        anchor: "UK & EU GDPR Article 30, Data Protection Act 2018",
-        shortDesc: "Transforms static Records of Processing Activities into a real-time living register by monitoring product Jira epics and cloud architecture changes.",
-        agent: "Triggered whenever an engineering ticket tagged 'Personal Data' is marked 'Completed' in Jira/Linear, or a new cloud database pipeline is spun up.",
-        skills: "RoPA Diff Engine (compares technical spec against existing Article 30 inventory); Data Flow Classifier (maps lawful basis under Art 6, special categories under Art 9, and cross-border transfer requirements); Gap Highlighter.",
-        repositories: "Statutory Article 30 Schema Templates, Corporate Data Retention Matrix, Approved Lawful Basis Guidelines.",
-        connectors: "Jira / Linear issue tracking, Cloud infrastructure data dictionaries (AWS / GCP / Snowflake), Procurement platforms.",
+        pillarName: "Privacy and data protection",
+        anchor: "UK and EU GDPR Article 30, Data Protection Act 2018",
+        imagePath: "RoPA Mindmap.png",
+        shortDesc: "Transforms static records of processing activities into a real-time living register by monitoring product epics and cloud architecture changes.",
         bottleneck: "Records of Processing Activities are static spreadsheets updated once a year, rendering them stale immediately upon product deployment and violating Article 30 accountability.",
-        resolution: "Agent generates an automated 'RoPA Diff & Proposed Addition' card whenever engineering code merges; Privacy Manager signs off with a single click to update the immutable central registry.",
+        resolution: "Agent generates an automated 'RoPA diff' card whenever engineering code merges. It uses RAG against approved lawful basis guidelines to propose data flow classifications. The privacy manager signs off with a single click to update the immutable registry.",
         metric: "Transitions RoPA updates from an annual 3-month manual forensic exercise into continuous, zero-friction 30-second reviews."
       },
       {
         id: 9,
-        title: "Horizon Scanning & Multi-Jurisdictional Regulatory Drift",
+        title: "Horizon scanning and multi-jurisdictional regulatory drift",
         pillar: "fincrime",
-        pillarName: "Sanctions & Financial Crime",
-        anchor: "OFSI, OTSI, OFAC, EU Council Sanctions Updates, Export Controls",
-        shortDesc: "Monitors global regulatory gazettes and sanctions lists in real time, executing delta analyses across active client registries and credit facilities.",
-        agent: "Triggered by incoming RSS alerts or official gazette API updates from OFSI, OTSI, OFAC, and EU Council. Initiates multi-jurisdiction impact sequence.",
-        skills: "Delta Analysis Skill (compares newly published designation names and aliases against internal customer books, trade loans, and vessel files); Legal Basis Analyzer (distinguishes asset freeze vs sectoral restrictions); Risk Alert Drafter.",
-        repositories: "Official Statutory Notices Library, Internal Legal Precedents on Designation Ambiguity, Active Counterparty Master Register.",
-        connectors: "Live regulatory RSS / API feeds via MCP, Enterprise Data Warehouse (SQL client accounts), Sanctions alert messaging channel.",
+        pillarName: "Sanctions and financial crime",
+        anchor: "OFSI, OTSI, OFAC, EU Council sanctions updates",
+        imagePath: "Sanctions Horizon Scanning.png",
+        shortDesc: "Monitors global regulatory gazettes in real time, executing delta analyses across active client registries and credit facilities.",
         bottleneck: "Compliance teams struggle to monitor fragmented global notices, creating multi-hour delays between a new designation and identifying exposed open transactions.",
-        resolution: "Autonomous delta scanning alerts legal counsel within 90 seconds of a new OFSI/OFAC notice, highlighting active counterparty nexus and pre-drafting asset freeze memos.",
+        resolution: "Autonomous delta scanning via MCP alerts legal counsel within 90 seconds of a new OFSI/OFAC notice. The agent auto routes a check against the active counterparty master register and pre-drafts asset freeze memos.",
         metric: "Reduces horizon-scanning exposure discovery time from 24–48 hours to under 2 minutes; zero delayed asset freezes or rogue transactional clearing."
       }
     ];
@@ -826,10 +757,7 @@
     const mPillar = document.getElementById("m-pillar");
     const mTitle = document.getElementById("m-title");
     const mAnchor = document.getElementById("m-anchor");
-    const mAgent = document.getElementById("m-agent");
-    const mSkill = document.getElementById("m-skill");
-    const mRepo = document.getElementById("m-repo");
-    const mConn = document.getElementById("m-conn");
+    const mImage = document.getElementById("m-image");
     const mBottleneck = document.getElementById("m-bottleneck");
     const mResolution = document.getElementById("m-resolution");
     const mMetric = document.getElementById("m-metric");
@@ -857,20 +785,20 @@
           <p class="card-problem">${item.shortDesc}</p>
           <div class="card-meta-box">
             <div class="meta-row">
-              <span class="meta-label">Primary Agent:</span>
-              <span class="meta-val">Autonomous Router</span>
+              <span class="meta-label">Primary intake:</span>
+              <span class="meta-val">Auto routing agent</span>
             </div>
             <div class="meta-row">
-              <span class="meta-label">Governance Gate:</span>
+              <span class="meta-label">Governance gate:</span>
               <span class="meta-val">Mandatory HITL</span>
             </div>
             <div class="meta-row">
-              <span class="meta-label">Connector Tech:</span>
-              <span class="meta-val">Live MCP Tooling</span>
+              <span class="meta-label">Architecture:</span>
+              <span class="meta-val">RAG &amp; live MCP</span>
             </div>
           </div>
           <div class="card-action">
-            <span>Explore Architecture</span>
+            <span>Explore architecture</span>
             <span>&rarr;</span>
           </div>
         `;
@@ -885,10 +813,11 @@
       mPillar.textContent = data.pillarName;
       mTitle.textContent = data.title;
       mAnchor.textContent = data.anchor;
-      mAgent.textContent = data.agent;
-      mSkill.textContent = data.skills;
-      mRepo.textContent = data.repositories;
-      mConn.textContent = data.connectors;
+      
+      // Update image source based on exact filename
+      mImage.src = data.imagePath;
+      mImage.alt = "Mindmap for " + data.title;
+      
       mBottleneck.textContent = data.bottleneck;
       mResolution.textContent = data.resolution;
       mMetric.textContent = data.metric;
