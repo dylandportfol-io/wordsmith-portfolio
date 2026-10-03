@@ -719,7 +719,7 @@
         shortDesc: "Automates root-cause reconciliation for transaction reporting rejections within the strict T+1 statutory deadline.",
         bottleneck: "Transaction errors (e.g., lapsed counterparty LEIs) fail at the ARM level, risking non-compliance with the mandatory T+1 deadline while compliance manually reconciles codes.",
         resolution: "Triggered by API webhooks, the agent auto routes the exception, fetches active LEI data via a GLEIF connector, and formats the corrected ISO 20022 XML payload. The remediation ticket is staged for senior compliance counsel HITL approval.",
-        metric: "Reduces error-to-resubmission turnaround by 85%; eliminates backlog of late reporting notifications to the Financial Conduct Authority."
+        metric: "Reduces error-to-resubmission turnaround by 85%; eliminates backlog of late reporting notifications to the FCA."
       },
       {
         id: 8,
